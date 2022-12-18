@@ -1,0 +1,96 @@
+@import "../Variables/Variables.scss";
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background: $backgroundColor;
+}
+
+//APP
+
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Supreme", sans-serif;
+  word-break: break-all;
+}
+
+.titule {
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+//HEADER
+
+.header {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 10px 5px 25px 1px rgba(0, 0, 0, 0.65);
+  border-radius: 15px;
+
+  .button,
+  .important,
+  .false-important {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+  }
+
+  input {
+    border: none;
+    font-size: 17px;
+    border: 1px solid grey;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .input-text {
+      height: 100px;
+      border: none;
+    }
+
+    .input-number {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.button {
+  font-size: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: $backgroundColor;
+}
+
+.important {
+  @include importan(rgba(255, 0, 0, 0.9));
+}
+
+.false-important {
+  @include importan(rgba(0, 0, 0, 0.595));
+}
+
+//TODOLIST
+
+.todoList {
+  flex: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

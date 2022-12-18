@@ -1,0 +1,61 @@
+@import "../Variables/Variables.scss";
+
+.task {
+  .content {
+    p {
+      @include p(gray, 100);
+    }
+  }
+}
+
+.important-task {
+  .content {
+    p {
+      @include p(rgba(255, 0, 0, 0.9), 700);
+    }
+  }
+}
+
+.task,
+.important-task {
+  @include tasks();
+
+  .content {
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      font-size: 22px;
+      border-right: none;
+    }
+
+    .date {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      color: white;
+      padding-bottom: 2px;
+    }
+
+    .name {
+      padding-bottom: 10px;
+    }
+  }
+
+  button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: $backgroundColor;
+    color: black;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 100;
+  }
+}

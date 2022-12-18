@@ -1,0 +1,37 @@
+//COLOR
+
+$backgroundColor: linear-gradient(
+  300deg,
+  rgb(0, 146, 169) 0%,
+  rgba(52, 227, 255, 0.7626400902157738) 100%,
+  rgba(0, 0, 0, 1) 100%
+);
+
+//MIXin
+
+@mixin tasks {
+  min-width: 300px;
+  max-width: 400px;
+  display: flex;
+  color: white;
+  padding: 15px;
+  flex-direction: column;
+  margin: 10px;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 10px 5px 25px 1px rgba(0, 0, 0, 0.65);
+  text-shadow: #474747 3px 5px 2px;
+}
+
+@mixin p($color, $fontWeight) {
+  background-color: $color;
+  font-weight: $fontWeight;
+}
+
+@mixin importan($color) {
+  background-color: $color;
+  font-weight: 700;
+  color: white;
+  padding: 10px 0;
+  transition: 0.2s;
+}
